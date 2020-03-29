@@ -29,6 +29,8 @@ DerivedData/
 *.ipa
 *.dSYM.zip
 *.dSYM
+*.app
+AliPayForDebug/AliPayForDebug/AliPayForDebug/AlipayWallet_Headers/
 
 # CocoaPods
 #

@@ -1,0 +1,920 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A536A38242D090A00356C45 /* MDConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A536A37242D090A00356C45 /* MDConfig.plist */; };
+		3A536A42242D090B00356C45 /* libAliPayForDebugDylib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A536A41242D090B00356C45 /* libAliPayForDebugDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3A536A50242D090B00356C45 /* AliPayForDebugDylib.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A536A4F242D090B00356C45 /* AliPayForDebugDylib.mm */; };
+		3A536A53242D090B00356C45 /* MDConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A536A52242D090B00356C45 /* MDConfigManager.h */; };
+		3A536A55242D090B00356C45 /* MDConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A536A54242D090B00356C45 /* MDConfigManager.m */; };
+		3A536A57242D090B00356C45 /* MDCycriptManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A536A56242D090B00356C45 /* MDCycriptManager.h */; };
+		3A536A59242D090B00356C45 /* MDCycriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A536A58242D090B00356C45 /* MDCycriptManager.m */; };
+		3A536A5B242D090B00356C45 /* MDMethodTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A536A5A242D090B00356C45 /* MDMethodTrace.h */; };
+		3A536A5D242D090B00356C45 /* MDMethodTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A536A5C242D090B00356C45 /* MDMethodTrace.m */; };
+		3A536A60242D090B00356C45 /* a1a2-selectortramps-arm.s in Sources */ = {isa = PBXBuildFile; fileRef = 3A536A5F242D090B00356C45 /* a1a2-selectortramps-arm.s */; };
+		3A536A62242D090B00356C45 /* a1a2-selectortramps-arm64.s in Sources */ = {isa = PBXBuildFile; fileRef = 3A536A61242D090B00356C45 /* a1a2-selectortramps-arm64.s */; };
+		3A536A64242D090B00356C45 /* a1a2-selectortramps-i386.s in Sources */ = {isa = PBXBuildFile; fileRef = 3A536A63242D090B00356C45 /* a1a2-selectortramps-i386.s */; };
+		3A536A66242D090B00356C45 /* a1a2-selectortramps-x86_64.s in Sources */ = {isa = PBXBuildFile; fileRef = 3A536A65242D090B00356C45 /* a1a2-selectortramps-x86_64.s */; };
+		3A536A68242D090B00356C45 /* a2a3-selectortramps-arm.s in Sources */ = {isa = PBXBuildFile; fileRef = 3A536A67242D090B00356C45 /* a2a3-selectortramps-arm.s */; };
+		3A536A6A242D090B00356C45 /* a2a3-selectortramps-i386.s in Sources */ = {isa = PBXBuildFile; fileRef = 3A536A69242D090B00356C45 /* a2a3-selectortramps-i386.s */; };
+		3A536A6C242D090B00356C45 /* a2a3-selectortramps-x86_64.s in Sources */ = {isa = PBXBuildFile; fileRef = 3A536A6B242D090B00356C45 /* a2a3-selectortramps-x86_64.s */; };
+		3A536A6E242D090B00356C45 /* OCMethodTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A536A6D242D090B00356C45 /* OCMethodTrace.h */; };
+		3A536A70242D090B00356C45 /* OCMethodTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A536A6F242D090B00356C45 /* OCMethodTrace.m */; };
+		3A536A72242D090B00356C45 /* OCSelectorTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A536A71242D090B00356C45 /* OCSelectorTrampolines.h */; };
+		3A536A74242D090B00356C45 /* OCSelectorTrampolines.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A536A73242D090B00356C45 /* OCSelectorTrampolines.mm */; };
+		3A536A78242D090B00356C45 /* LLDBTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A536A77242D090B00356C45 /* LLDBTools.h */; };
+		3A536A7A242D090B00356C45 /* LLDBTools.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3A536A79242D090B00356C45 /* LLDBTools.mm */; };
+		3A536A7F242D090B00356C45 /* AntiAntiDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A536A7E242D090B00356C45 /* AntiAntiDebug.m */; };
+		3A536A82242D090B00356C45 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 3A536A81242D090B00356C45 /* fishhook.c */; };
+		3A536A84242D090B00356C45 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A536A83242D090B00356C45 /* fishhook.h */; };
+		3A536AD6242F5E9D00356C45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A536AD5242F5E9D00356C45 /* Foundation.framework */; platformFilter = ios; };
+		3A536AD8242F5EAB00356C45 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A536AD7242F5EAB00356C45 /* JavaScriptCore.framework */; platformFilter = ios; };
+		3A536AD9242F5EB300356C45 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A536A4A242D090B00356C45 /* UIKit.framework */; platformFilter = ios; };
+		3AF22869242FA70C00692D98 /* BBASMRecordHierarchyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF22854242FA70C00692D98 /* BBASMRecordHierarchyModel.m */; };
+		3AF2286A242FA70C00692D98 /* BBASMTimeProfilerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF22855242FA70C00692D98 /* BBASMTimeProfilerVC.m */; };
+		3AF2286B242FA70C00692D98 /* BBASMCallTrace.c in Sources */ = {isa = PBXBuildFile; fileRef = 3AF22856242FA70C00692D98 /* BBASMCallTrace.c */; };
+		3AF2286C242FA70C00692D98 /* BBASMTimeProfileDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AF22857242FA70C00692D98 /* BBASMTimeProfileDataManager.h */; };
+		3AF2286D242FA70C00692D98 /* BBASMRecordModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AF22859242FA70C00692D98 /* BBASMRecordModel.h */; };
+		3AF2286E242FA70C00692D98 /* BBASMCallTraceRunTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AF2285A242FA70C00692D98 /* BBASMCallTraceRunTime.h */; };
+		3AF2286F242FA70C00692D98 /* BBASMCallTraceInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2285B242FA70C00692D98 /* BBASMCallTraceInterface.m */; };
+		3AF22870242FA70C00692D98 /* BBASMRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2285C242FA70C00692D98 /* BBASMRecordCell.m */; };
+		3AF22871242FA70C00692D98 /* BBASMTimeProfileDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2285D242FA70C00692D98 /* BBASMTimeProfileDataManager.m */; };
+		3AF22872242FA70C00692D98 /* BBASMCallTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AF2285E242FA70C00692D98 /* BBASMCallTrace.h */; };
+		3AF22873242FA70C00692D98 /* BBASMRecordHierarchyModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AF2285F242FA70C00692D98 /* BBASMRecordHierarchyModel.h */; };
+		3AF22874242FA70C00692D98 /* BBASMTimeProfilerVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AF22860242FA70C00692D98 /* BBASMTimeProfilerVC.h */; };
+		3AF22875242FA70C00692D98 /* BBASMRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF22861242FA70C00692D98 /* BBASMRecordModel.m */; };
+		3AF22876242FA70C00692D98 /* bbasm-calltrace-objc-msg-arm64.s in Sources */ = {isa = PBXBuildFile; fileRef = 3AF22862242FA70C00692D98 /* bbasm-calltrace-objc-msg-arm64.s */; };
+		3AF22877242FA70C00692D98 /* BBASMCallTraceRunTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF22863242FA70C00692D98 /* BBASMCallTraceRunTime.m */; };
+		3AF22878242FA70C00692D98 /* BBASMRecordCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AF22864242FA70C00692D98 /* BBASMRecordCell.h */; };
+		3AF22879242FA70C00692D98 /* BBASMCallTraceInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AF22865242FA70C00692D98 /* BBASMCallTraceInterface.h */; };
+		3AF2287A242FA70C00692D98 /* BBASMCallTraceProfilerEntrance.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AF22867242FA70C00692D98 /* BBASMCallTraceProfilerEntrance.h */; };
+		3AF2287B242FA70C00692D98 /* BBASMCallTraceProfilerEntrance.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF22868242FA70C00692D98 /* BBASMCallTraceProfilerEntrance.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A536A43242D090B00356C45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A536A25242D090A00356C45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A536A40242D090B00356C45;
+			remoteInfo = AliPayForDebugDylib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3A536A2D242D090A00356C45 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3A536A42242D090B00356C45 /* libAliPayForDebugDylib.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3A536A30242D090A00356C45 /* AliPayForDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AliPayForDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A536A33242D090A00356C45 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		3A536A35242D090A00356C45 /* quick-resign.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "quick-resign.sh"; sourceTree = "<group>"; };
+		3A536A37242D090A00356C45 /* MDConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MDConfig.plist; sourceTree = "<group>"; };
+		3A536A3A242D090A00356C45 /* put ipa or app here */ = {isa = PBXFileReference; lastKnownFileType = text; path = "put ipa or app here"; sourceTree = "<group>"; };
+		3A536A3B242D090A00356C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A536A41242D090B00356C45 /* libAliPayForDebugDylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libAliPayForDebugDylib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A536A46242D090B00356C45 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		3A536A48242D090B00356C45 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3A536A4A242D090B00356C45 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3A536A4E242D090B00356C45 /* AliPayForDebugDylib.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = AliPayForDebugDylib.xm; sourceTree = "<group>"; };
+		3A536A4F242D090B00356C45 /* AliPayForDebugDylib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AliPayForDebugDylib.mm; sourceTree = "<group>"; };
+		3A536A52242D090B00356C45 /* MDConfigManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDConfigManager.h; sourceTree = "<group>"; };
+		3A536A54242D090B00356C45 /* MDConfigManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDConfigManager.m; sourceTree = "<group>"; };
+		3A536A56242D090B00356C45 /* MDCycriptManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDCycriptManager.h; sourceTree = "<group>"; };
+		3A536A58242D090B00356C45 /* MDCycriptManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDCycriptManager.m; sourceTree = "<group>"; };
+		3A536A5A242D090B00356C45 /* MDMethodTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDMethodTrace.h; sourceTree = "<group>"; };
+		3A536A5C242D090B00356C45 /* MDMethodTrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDMethodTrace.m; sourceTree = "<group>"; };
+		3A536A5F242D090B00356C45 /* a1a2-selectortramps-arm.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a1a2-selectortramps-arm.s"; sourceTree = "<group>"; };
+		3A536A61242D090B00356C45 /* a1a2-selectortramps-arm64.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a1a2-selectortramps-arm64.s"; sourceTree = "<group>"; };
+		3A536A63242D090B00356C45 /* a1a2-selectortramps-i386.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a1a2-selectortramps-i386.s"; sourceTree = "<group>"; };
+		3A536A65242D090B00356C45 /* a1a2-selectortramps-x86_64.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a1a2-selectortramps-x86_64.s"; sourceTree = "<group>"; };
+		3A536A67242D090B00356C45 /* a2a3-selectortramps-arm.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a2a3-selectortramps-arm.s"; sourceTree = "<group>"; };
+		3A536A69242D090B00356C45 /* a2a3-selectortramps-i386.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a2a3-selectortramps-i386.s"; sourceTree = "<group>"; };
+		3A536A6B242D090B00356C45 /* a2a3-selectortramps-x86_64.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a2a3-selectortramps-x86_64.s"; sourceTree = "<group>"; };
+		3A536A6D242D090B00356C45 /* OCMethodTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMethodTrace.h; sourceTree = "<group>"; };
+		3A536A6F242D090B00356C45 /* OCMethodTrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCMethodTrace.m; sourceTree = "<group>"; };
+		3A536A71242D090B00356C45 /* OCSelectorTrampolines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCSelectorTrampolines.h; sourceTree = "<group>"; };
+		3A536A73242D090B00356C45 /* OCSelectorTrampolines.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OCSelectorTrampolines.mm; sourceTree = "<group>"; };
+		3A536A75242D090B00356C45 /* selectortramps.mac */ = {isa = PBXFileReference; lastKnownFileType = text; path = selectortramps.mac; sourceTree = "<group>"; };
+		3A536A77242D090B00356C45 /* LLDBTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLDBTools.h; sourceTree = "<group>"; };
+		3A536A79242D090B00356C45 /* LLDBTools.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LLDBTools.mm; sourceTree = "<group>"; };
+		3A536A7E242D090B00356C45 /* AntiAntiDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AntiAntiDebug.m; sourceTree = "<group>"; };
+		3A536A81242D090B00356C45 /* fishhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
+		3A536A83242D090B00356C45 /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		3A536AD5242F5E9D00356C45 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3A536AD7242F5EAB00356C45 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		3AA28D1B2430826A00B3E778 /* libhookzz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libhookzz.dylib; path = AliPayForDebugDylib/HookZz/libhookzz.dylib; sourceTree = "<group>"; };
+		3AA28D1C2430826A00B3E778 /* libhookzz.static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhookzz.static.a; path = AliPayForDebugDylib/HookZz/libhookzz.static.a; sourceTree = "<group>"; };
+		3AF22854242FA70C00692D98 /* BBASMRecordHierarchyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBASMRecordHierarchyModel.m; sourceTree = "<group>"; };
+		3AF22855242FA70C00692D98 /* BBASMTimeProfilerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBASMTimeProfilerVC.m; sourceTree = "<group>"; };
+		3AF22856242FA70C00692D98 /* BBASMCallTrace.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BBASMCallTrace.c; sourceTree = "<group>"; };
+		3AF22857242FA70C00692D98 /* BBASMTimeProfileDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBASMTimeProfileDataManager.h; sourceTree = "<group>"; };
+		3AF22858242FA70C00692D98 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		3AF22859242FA70C00692D98 /* BBASMRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBASMRecordModel.h; sourceTree = "<group>"; };
+		3AF2285A242FA70C00692D98 /* BBASMCallTraceRunTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBASMCallTraceRunTime.h; sourceTree = "<group>"; };
+		3AF2285B242FA70C00692D98 /* BBASMCallTraceInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBASMCallTraceInterface.m; sourceTree = "<group>"; };
+		3AF2285C242FA70C00692D98 /* BBASMRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBASMRecordCell.m; sourceTree = "<group>"; };
+		3AF2285D242FA70C00692D98 /* BBASMTimeProfileDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBASMTimeProfileDataManager.m; sourceTree = "<group>"; };
+		3AF2285E242FA70C00692D98 /* BBASMCallTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBASMCallTrace.h; sourceTree = "<group>"; };
+		3AF2285F242FA70C00692D98 /* BBASMRecordHierarchyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBASMRecordHierarchyModel.h; sourceTree = "<group>"; };
+		3AF22860242FA70C00692D98 /* BBASMTimeProfilerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBASMTimeProfilerVC.h; sourceTree = "<group>"; };
+		3AF22861242FA70C00692D98 /* BBASMRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBASMRecordModel.m; sourceTree = "<group>"; };
+		3AF22862242FA70C00692D98 /* bbasm-calltrace-objc-msg-arm64.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = "bbasm-calltrace-objc-msg-arm64.s"; sourceTree = "<group>"; };
+		3AF22863242FA70C00692D98 /* BBASMCallTraceRunTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBASMCallTraceRunTime.m; sourceTree = "<group>"; };
+		3AF22864242FA70C00692D98 /* BBASMRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBASMRecordCell.h; sourceTree = "<group>"; };
+		3AF22865242FA70C00692D98 /* BBASMCallTraceInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBASMCallTraceInterface.h; sourceTree = "<group>"; };
+		3AF22867242FA70C00692D98 /* BBASMCallTraceProfilerEntrance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBASMCallTraceProfilerEntrance.h; sourceTree = "<group>"; };
+		3AF22868242FA70C00692D98 /* BBASMCallTraceProfilerEntrance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBASMCallTraceProfilerEntrance.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A536A2A242D090A00356C45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A536A3E242D090B00356C45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A536AD8242F5EAB00356C45 /* JavaScriptCore.framework in Frameworks */,
+				3A536AD9242F5EB300356C45 /* UIKit.framework in Frameworks */,
+				3A536AD6242F5E9D00356C45 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A536A24242D090A00356C45 = {
+			isa = PBXGroup;
+			children = (
+				3A536A32242D090A00356C45 /* AliPayForDebug */,
+				3A536A4C242D090B00356C45 /* AliPayForDebugDylib */,
+				3A536A45242D090B00356C45 /* Frameworks */,
+				3A536A31242D090A00356C45 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A536A31242D090A00356C45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A536A30242D090A00356C45 /* AliPayForDebug.app */,
+				3A536A41242D090B00356C45 /* libAliPayForDebugDylib.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A536A32242D090A00356C45 /* AliPayForDebug */ = {
+			isa = PBXGroup;
+			children = (
+				3A536A33242D090A00356C45 /* icon.png */,
+				3A536A3B242D090A00356C45 /* Info.plist */,
+				3A536A34242D090A00356C45 /* Scripts */,
+				3A536A36242D090A00356C45 /* Config */,
+				3A536A39242D090A00356C45 /* TargetApp */,
+			);
+			path = AliPayForDebug;
+			sourceTree = "<group>";
+		};
+		3A536A34242D090A00356C45 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				3A536A35242D090A00356C45 /* quick-resign.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		3A536A36242D090A00356C45 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3A536A37242D090A00356C45 /* MDConfig.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		3A536A39242D090A00356C45 /* TargetApp */ = {
+			isa = PBXGroup;
+			children = (
+				3A536A3A242D090A00356C45 /* put ipa or app here */,
+			);
+			path = TargetApp;
+			sourceTree = "<group>";
+		};
+		3A536A45242D090B00356C45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AA28D1B2430826A00B3E778 /* libhookzz.dylib */,
+				3AA28D1C2430826A00B3E778 /* libhookzz.static.a */,
+				3A536AD7242F5EAB00356C45 /* JavaScriptCore.framework */,
+				3A536AD5242F5E9D00356C45 /* Foundation.framework */,
+				3A536A46242D090B00356C45 /* JavaScriptCore.framework */,
+				3A536A48242D090B00356C45 /* Foundation.framework */,
+				3A536A4A242D090B00356C45 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A536A4C242D090B00356C45 /* AliPayForDebugDylib */ = {
+			isa = PBXGroup;
+			children = (
+				3AF22852242FA70C00692D98 /* Monitor */,
+				3A536A4D242D090B00356C45 /* Logos */,
+				3A536A51242D090B00356C45 /* Config */,
+				3A536A5E242D090B00356C45 /* Trace */,
+				3A536A76242D090B00356C45 /* Tools */,
+				3A536A7D242D090B00356C45 /* AntiAntiDebug */,
+				3A536A80242D090B00356C45 /* fishhook */,
+				3A536A7B242D090B00356C45 /* Supporting Files */,
+			);
+			path = AliPayForDebugDylib;
+			sourceTree = "<group>";
+		};
+		3A536A4D242D090B00356C45 /* Logos */ = {
+			isa = PBXGroup;
+			children = (
+				3A536A4E242D090B00356C45 /* AliPayForDebugDylib.xm */,
+				3A536A4F242D090B00356C45 /* AliPayForDebugDylib.mm */,
+			);
+			path = Logos;
+			sourceTree = "<group>";
+		};
+		3A536A51242D090B00356C45 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3A536A52242D090B00356C45 /* MDConfigManager.h */,
+				3A536A54242D090B00356C45 /* MDConfigManager.m */,
+				3A536A56242D090B00356C45 /* MDCycriptManager.h */,
+				3A536A58242D090B00356C45 /* MDCycriptManager.m */,
+				3A536A5A242D090B00356C45 /* MDMethodTrace.h */,
+				3A536A5C242D090B00356C45 /* MDMethodTrace.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		3A536A5E242D090B00356C45 /* Trace */ = {
+			isa = PBXGroup;
+			children = (
+				3A536A5F242D090B00356C45 /* a1a2-selectortramps-arm.s */,
+				3A536A61242D090B00356C45 /* a1a2-selectortramps-arm64.s */,
+				3A536A63242D090B00356C45 /* a1a2-selectortramps-i386.s */,
+				3A536A65242D090B00356C45 /* a1a2-selectortramps-x86_64.s */,
+				3A536A67242D090B00356C45 /* a2a3-selectortramps-arm.s */,
+				3A536A69242D090B00356C45 /* a2a3-selectortramps-i386.s */,
+				3A536A6B242D090B00356C45 /* a2a3-selectortramps-x86_64.s */,
+				3A536A6D242D090B00356C45 /* OCMethodTrace.h */,
+				3A536A6F242D090B00356C45 /* OCMethodTrace.m */,
+				3A536A71242D090B00356C45 /* OCSelectorTrampolines.h */,
+				3A536A73242D090B00356C45 /* OCSelectorTrampolines.mm */,
+				3A536A75242D090B00356C45 /* selectortramps.mac */,
+			);
+			path = Trace;
+			sourceTree = "<group>";
+		};
+		3A536A76242D090B00356C45 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				3A536A77242D090B00356C45 /* LLDBTools.h */,
+				3A536A79242D090B00356C45 /* LLDBTools.mm */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		3A536A7B242D090B00356C45 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A536A7D242D090B00356C45 /* AntiAntiDebug */ = {
+			isa = PBXGroup;
+			children = (
+				3A536A7E242D090B00356C45 /* AntiAntiDebug.m */,
+			);
+			path = AntiAntiDebug;
+			sourceTree = "<group>";
+		};
+		3A536A80242D090B00356C45 /* fishhook */ = {
+			isa = PBXGroup;
+			children = (
+				3A536A81242D090B00356C45 /* fishhook.c */,
+				3A536A83242D090B00356C45 /* fishhook.h */,
+			);
+			path = fishhook;
+			sourceTree = "<group>";
+		};
+		3AF22852242FA70C00692D98 /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				3AF22853242FA70C00692D98 /* TimeProfiler */,
+				3AF22866242FA70C00692D98 /* Entrance */,
+			);
+			path = Monitor;
+			sourceTree = "<group>";
+		};
+		3AF22853242FA70C00692D98 /* TimeProfiler */ = {
+			isa = PBXGroup;
+			children = (
+				3AF22862242FA70C00692D98 /* bbasm-calltrace-objc-msg-arm64.s */,
+				3AF22856242FA70C00692D98 /* BBASMCallTrace.c */,
+				3AF2285E242FA70C00692D98 /* BBASMCallTrace.h */,
+				3AF22865242FA70C00692D98 /* BBASMCallTraceInterface.h */,
+				3AF2285B242FA70C00692D98 /* BBASMCallTraceInterface.m */,
+				3AF2285A242FA70C00692D98 /* BBASMCallTraceRunTime.h */,
+				3AF22863242FA70C00692D98 /* BBASMCallTraceRunTime.m */,
+				3AF22864242FA70C00692D98 /* BBASMRecordCell.h */,
+				3AF2285C242FA70C00692D98 /* BBASMRecordCell.m */,
+				3AF2285F242FA70C00692D98 /* BBASMRecordHierarchyModel.h */,
+				3AF22854242FA70C00692D98 /* BBASMRecordHierarchyModel.m */,
+				3AF22859242FA70C00692D98 /* BBASMRecordModel.h */,
+				3AF22861242FA70C00692D98 /* BBASMRecordModel.m */,
+				3AF22857242FA70C00692D98 /* BBASMTimeProfileDataManager.h */,
+				3AF2285D242FA70C00692D98 /* BBASMTimeProfileDataManager.m */,
+				3AF22860242FA70C00692D98 /* BBASMTimeProfilerVC.h */,
+				3AF22855242FA70C00692D98 /* BBASMTimeProfilerVC.m */,
+				3AF22858242FA70C00692D98 /* LICENSE */,
+			);
+			path = TimeProfiler;
+			sourceTree = "<group>";
+		};
+		3AF22866242FA70C00692D98 /* Entrance */ = {
+			isa = PBXGroup;
+			children = (
+				3AF22867242FA70C00692D98 /* BBASMCallTraceProfilerEntrance.h */,
+				3AF22868242FA70C00692D98 /* BBASMCallTraceProfilerEntrance.m */,
+			);
+			path = Entrance;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3A536A3F242D090B00356C45 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AF2287A242FA70C00692D98 /* BBASMCallTraceProfilerEntrance.h in Headers */,
+				3AF22879242FA70C00692D98 /* BBASMCallTraceInterface.h in Headers */,
+				3AF2286E242FA70C00692D98 /* BBASMCallTraceRunTime.h in Headers */,
+				3A536A57242D090B00356C45 /* MDCycriptManager.h in Headers */,
+				3AF22872242FA70C00692D98 /* BBASMCallTrace.h in Headers */,
+				3AF22878242FA70C00692D98 /* BBASMRecordCell.h in Headers */,
+				3AF2286C242FA70C00692D98 /* BBASMTimeProfileDataManager.h in Headers */,
+				3A536A5B242D090B00356C45 /* MDMethodTrace.h in Headers */,
+				3A536A84242D090B00356C45 /* fishhook.h in Headers */,
+				3A536A78242D090B00356C45 /* LLDBTools.h in Headers */,
+				3AF22874242FA70C00692D98 /* BBASMTimeProfilerVC.h in Headers */,
+				3A536A53242D090B00356C45 /* MDConfigManager.h in Headers */,
+				3AF2286D242FA70C00692D98 /* BBASMRecordModel.h in Headers */,
+				3A536A72242D090B00356C45 /* OCSelectorTrampolines.h in Headers */,
+				3A536A6E242D090B00356C45 /* OCMethodTrace.h in Headers */,
+				3AF22873242FA70C00692D98 /* BBASMRecordHierarchyModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3A536A2F242D090A00356C45 /* AliPayForDebug */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A536A8E242D090B00356C45 /* Build configuration list for PBXNativeTarget "AliPayForDebug" */;
+			buildPhases = (
+				3A536A29242D090A00356C45 /* Sources */,
+				3A536A2A242D090A00356C45 /* Frameworks */,
+				3A536A2B242D090A00356C45 /* ShellScript */,
+				3A536A2C242D090A00356C45 /* Resources */,
+				3A536A2D242D090A00356C45 /* CopyFiles */,
+				3A536A2E242D090A00356C45 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A536A44242D090B00356C45 /* PBXTargetDependency */,
+			);
+			name = AliPayForDebug;
+			productName = AliPayForDebug;
+			productReference = 3A536A30242D090A00356C45 /* AliPayForDebug.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A536A40242D090B00356C45 /* AliPayForDebugDylib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A536A8B242D090B00356C45 /* Build configuration list for PBXNativeTarget "AliPayForDebugDylib" */;
+			buildPhases = (
+				3A536A3C242D090B00356C45 /* ShellScript */,
+				3A536A3D242D090B00356C45 /* Sources */,
+				3A536A3E242D090B00356C45 /* Frameworks */,
+				3A536A3F242D090B00356C45 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AliPayForDebugDylib;
+			productName = AliPayForDebugDylib;
+			productReference = 3A536A41242D090B00356C45 /* libAliPayForDebugDylib.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A536A25242D090A00356C45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = com.ceekay1991;
+				TargetAttributes = {
+					3A536A2F242D090A00356C45 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					3A536A40242D090B00356C45 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = 3A536A28242D090A00356C45 /* Build configuration list for PBXProject "AliPayForDebug" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A536A24242D090A00356C45;
+			productRefGroup = 3A536A31242D090A00356C45 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A536A2F242D090A00356C45 /* AliPayForDebug */,
+				3A536A40242D090B00356C45 /* AliPayForDebugDylib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A536A2C242D090A00356C45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A536A38242D090A00356C45 /* MDConfig.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A536A2B242D090A00356C45 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/Tools/pack.sh\n\n\n";
+		};
+		3A536A2E242D090A00356C45 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/Tools/pack.sh codesign\n";
+		};
+		3A536A3C242D090B00356C45 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A536A29242D090A00356C45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A536A3D242D090B00356C45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A536A59242D090B00356C45 /* MDCycriptManager.m in Sources */,
+				3A536A62242D090B00356C45 /* a1a2-selectortramps-arm64.s in Sources */,
+				3A536A60242D090B00356C45 /* a1a2-selectortramps-arm.s in Sources */,
+				3A536A66242D090B00356C45 /* a1a2-selectortramps-x86_64.s in Sources */,
+				3AF2286B242FA70C00692D98 /* BBASMCallTrace.c in Sources */,
+				3A536A70242D090B00356C45 /* OCMethodTrace.m in Sources */,
+				3A536A55242D090B00356C45 /* MDConfigManager.m in Sources */,
+				3A536A82242D090B00356C45 /* fishhook.c in Sources */,
+				3A536A7F242D090B00356C45 /* AntiAntiDebug.m in Sources */,
+				3AF22875242FA70C00692D98 /* BBASMRecordModel.m in Sources */,
+				3AF22876242FA70C00692D98 /* bbasm-calltrace-objc-msg-arm64.s in Sources */,
+				3AF2287B242FA70C00692D98 /* BBASMCallTraceProfilerEntrance.m in Sources */,
+				3AF22870242FA70C00692D98 /* BBASMRecordCell.m in Sources */,
+				3A536A74242D090B00356C45 /* OCSelectorTrampolines.mm in Sources */,
+				3A536A64242D090B00356C45 /* a1a2-selectortramps-i386.s in Sources */,
+				3AF2286A242FA70C00692D98 /* BBASMTimeProfilerVC.m in Sources */,
+				3AF22877242FA70C00692D98 /* BBASMCallTraceRunTime.m in Sources */,
+				3A536A6A242D090B00356C45 /* a2a3-selectortramps-i386.s in Sources */,
+				3AF22871242FA70C00692D98 /* BBASMTimeProfileDataManager.m in Sources */,
+				3A536A68242D090B00356C45 /* a2a3-selectortramps-arm.s in Sources */,
+				3A536A50242D090B00356C45 /* AliPayForDebugDylib.mm in Sources */,
+				3A536A7A242D090B00356C45 /* LLDBTools.mm in Sources */,
+				3A536A6C242D090B00356C45 /* a2a3-selectortramps-x86_64.s in Sources */,
+				3AF22869242FA70C00692D98 /* BBASMRecordHierarchyModel.m in Sources */,
+				3A536A5D242D090B00356C45 /* MDMethodTrace.m in Sources */,
+				3AF2286F242FA70C00692D98 /* BBASMCallTraceInterface.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A536A44242D090B00356C45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A536A40242D090B00356C45 /* AliPayForDebugDylib */;
+			targetProxy = 3A536A43242D090B00356C45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3A536A89242D090B00356C45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3A536A8A242D090B00356C45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A536A8C242D090B00356C45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LA546BDDH6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AliPayForDebugDylib/AliPayForDebugDylib-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libAliPayForDebugDylib.dylib";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+					"$(PROJECT_DIR)/AliPayForDebugDylib/HookZz",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"AliPayForDebugDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
+					"-lcycript",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		3A536A8D242D090B00356C45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = LA546BDDH6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AliPayForDebugDylib/AliPayForDebugDylib-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libAliPayForDebugDylib.dylib";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+					"$(PROJECT_DIR)/AliPayForDebugDylib/HookZz",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"AliPayForDebugDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Release;
+		};
+		3A536A8F242D090B00356C45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LA546BDDH6;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = AliPayForDebug/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AliPayForDebugDylib/HookZz",
+				);
+				MONKEYDEV_ADD_SUBSTRATE = YES;
+				MONKEYDEV_CLASS_DUMP = YES;
+				MONKEYDEV_DEFAULT_BUNDLEID = YES;
+				MONKEYDEV_INSERT_DYLIB = YES;
+				MONKEYDEV_RESTORE_SYMBOL = YES;
+				MONKEYDEV_TARGET_APP = Optional;
+				OTHER_LDFLAGS = "";
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceekay1991.AliPayForDebug;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
+		};
+		3A536A90242D090B00356C45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LA546BDDH6;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = AliPayForDebug/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AliPayForDebugDylib/HookZz",
+				);
+				MONKEYDEV_ADD_SUBSTRATE = YES;
+				MONKEYDEV_CLASS_DUMP = YES;
+				MONKEYDEV_DEFAULT_BUNDLEID = YES;
+				MONKEYDEV_INSERT_DYLIB = YES;
+				MONKEYDEV_RESTORE_SYMBOL = YES;
+				MONKEYDEV_TARGET_APP = Optional;
+				OTHER_LDFLAGS = "";
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceekay1991.AliPayForDebug;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A536A28242D090A00356C45 /* Build configuration list for PBXProject "AliPayForDebug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A536A89242D090B00356C45 /* Debug */,
+				3A536A8A242D090B00356C45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A536A8B242D090B00356C45 /* Build configuration list for PBXNativeTarget "AliPayForDebugDylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A536A8C242D090B00356C45 /* Debug */,
+				3A536A8D242D090B00356C45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A536A8E242D090B00356C45 /* Build configuration list for PBXNativeTarget "AliPayForDebug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A536A8F242D090B00356C45 /* Debug */,
+				3A536A90242D090B00356C45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A536A25242D090A00356C45 /* Project object */;
+}
